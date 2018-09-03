@@ -1,0 +1,57 @@
+{
+  "skills": [
+    {
+      "number": "12",
+      "text": "Возраст начала занятий на скрипке"
+    },
+    {
+      "number": "165",
+      "text": "Концертов отыграл"
+    },
+    {
+      "number": "54",
+      "text": "Максимальное число городов в туре"
+    },
+    {
+      "number": "20",
+      "text": "Лет на сцене в качестве скрипача"
+    }
+  ],
+  "products": [
+    {
+      "name": "худи",
+      "price": "350",
+      "src": "upload/muzhskaya-tolstovka-the-north-face-fine-full-zip-hoodie-vintage-white-0_450x450.jpg"
+    },
+    {
+      "name": "толстовка белая",
+      "price": "260",
+      "src": "upload/muzhskaya-tolstovka-billionaire-boys-club-enlarging-the-ideal-popover-hoodie-bone-0_450x450.jpg"
+    },
+    {
+      "name": "кепка",
+      "price": "140",
+      "src": "upload/muzhskaya-kepka-the-north-face-the-norm-hat-vintage-white-shady-blue-0_676x676.jpg"
+    },
+    {
+      "name": "майка",
+      "price": "60",
+      "src": "upload/muzhskaya-futbolka-the-north-face-fine-2-vintage-white-asphalt-0_450x450.jpg"
+    },
+    {
+      "name": "кросовки",
+      "price": "290",
+      "src": "upload/krossovki-reebok-club-c-85-mu-chalk-black-3_450x450.jpg"
+    },
+    {
+      "name": "майка беж",
+      "price": "50",
+      "src": "upload/muzhskaya-futbolka-nike-acg-cltr-1-light-cream-geode-teal-0_676x676.jpg"
+    }
+  ],
+  "user": {
+    "login": "admin",
+    "hash": "4fcc8b89e35a87fcc4d301ed1ee5b36c2f397d174fb0559dc1eca5575d34051f260d514d8426c3c7f0c34f89042fdcabd65aef41219bf8ced64309a5aa346d4a5e68f89bb27cdd389819ee233a565067bc8b940b7c6d505e3c17d50981cf9881c9362d79d24c44a41346dfd5a727d258c295032163fd2f6be8fa0ccebc34f6aea3a4d78d14311c8d28a18576099d712972166f1728ac6933085d0515e92ee603717f733d82ac0ad8231dc087a8f3abf555967601a69dae158899f84d96d6b0957930223a8681056f8ec70972de5dda736cda8b04cc4f465d75446d7c8fa579c193563823b0b0c1e6923db2ebe6537a9aa4f654e460729534eaee3ec059a3da11deac70674fce6d31302d891f6ccc32620024c93569b118a1caa5be282221a07f42eff031ce3ab578d069d38cc4f99015e19f13f730d594b2b9be94b106f163526b2dbe06224b1350a89e28ac6b82462311afa8eedb666dbf62a5919544b4b6500164f72cd3fded5c53a9596770bbbf0ca8b710f9c9f48fa151280be499c88b41ab214dd0d27116116a5e0a0b0f0d2f14182a62fe471148713eb51c72c812c76a62ba7e1eb07b82f54e92e7e5d5eadf0c5d7feefbbd764a617205e01baeba8c23d28eafccb85d936ef18b01253b6036e6c83490fe4d83f965133db036cdc978fbd3f1afd2e73f4ef9fafcdaaa98f1925acfabd74cc62dee9b0a90d3f56b60bbf8",
+    "salt": "df53add70d2c91968f415f274d9b539f"
+  }
+}
