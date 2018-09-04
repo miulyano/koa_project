@@ -7,19 +7,26 @@ const ctrlAdmin = require('../controllers/admin');
 const ctrlLogin = require('../controllers/login');
 const ctrlMail = require('../controllers/mail');
 
+const isAdmin = (ctx, next) => {
+    if(ctx.session.isAdmin) {
+        return next();
+    }
+    ctx.redirect('/');
+};
+
 router.get('/', ctrlHome.index);
 router.get('/login', ctrlLogin.login);
-router.get('/admin', ctrlAdmin.admin);
+router.get('/admin', isAdmin, ctrlAdmin.admin);
 
 router.post('/login', koaBody(), ctrlLogin.auth);
 router.post('/', koaBody(), ctrlMail.mail);
-router.post('/admin/upload', koaBody({
+router.post('/admin/upload', isAdmin, koaBody({
         multipart: true,
         formidable: {
             uploadDir: process.cwd() + '/upload'
         }
     }),  ctrlAdmin.item);
-router.post('/admin/skills', koaBody(), ctrlAdmin.skills);
+router.post('/admin/skills', isAdmin, koaBody(), ctrlAdmin.skills);
 
 
 

@@ -42,25 +42,27 @@ module.exports.skills = async(ctx, next) => {
 };
 
 module.exports.item = async(ctx, next) => {
-    const {title, price} = ctx.request.body;
-    const {name, path, size} = ctx.request.files.file;
-    let fileName = _path.join(process.cwd(), 'upload', name);
-    const errUpload = await rename(path, fileName);
-    if (errUpload) {
-        return (ctx.body = {
-            mes: 'При загрузке картинки произошла ошибка',
-            status: 'Error'
-        })
-    }
-    await db.get('products').push({
+    if(ctx.request.body) {
+        const {title, price} = ctx.request.body;
+        const {name, path, size} = ctx.request.files.file;
+        let fileName = _path.join(process.cwd(), 'upload', name);
+        const errUpload = await rename(path, fileName);
+        if (errUpload) {
+            return (ctx.body = {
+                mes: 'При загрузке картинки произошла ошибка',
+                status: 'Error'
+            })
+        }
+        await db.get('products').push({
             name: title,
             price: price,
             src: _path.join('upload', name)
         })
-        .write();
-    ctx.body = {
-        msgupload: 'Товар успешно добавлен',
-        status: 'OK'
-    };
-    ctx.redirect('/admin');
+            .write();
+        ctx.body = {
+            msgupload: 'Товар успешно добавлен',
+            status: 'OK'
+        };
+        ctx.redirect('/admin');
+    }
 };

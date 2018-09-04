@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const app = new Koa();
 const fs = require('fs');
-const static = require('koa-static');
+const staticKoa = require('koa-static');
 const session = require('koa-session');
 const Pug = require('koa-pug');
 const mount = require('koa-mount');
@@ -11,8 +11,8 @@ const pug = new Pug({
 const errorHandler = require('./libs/error');
 const config = require('./config');
 
-app.use(static('./public'));
-app.use(mount('/upload', static('./upload')));
+app.use(staticKoa('./public'));
+app.use(mount('/upload', staticKoa('./upload')));
 
 app.use(errorHandler);
 app.on('error', (err, ctx) => {
